@@ -19,10 +19,11 @@ The official project submission repository for **DEFINE 4.0 — The World's Real
 
 | Name | Role | GitHub | LinkedIn |
 |------|------|--------|----------|
-| Arathy Krishna AM | Role | [@username](https://github.com/arathy-2007) | [Profile](https://linkedin.com/in/username) |
-| Eshan MS | Role | [@username](https://github.com/eshanms) | [Profile](https://linkedin.com/in/username) |
-| Gokul Viswa P | Role | [@username](https://github.com/xbox-one-x-guy) | [Profile](https://linkedin.com/in/gokul-viswa-p-863a58381) |
-| S Aswini Devi | Role | [@username](https://github.com/aswiniidevi) | [Profile](https://linkedin.com/in/username) |
+| Abhedh Krishnan JR | Leader | [@username](https://github.com/krizxjr) | [Profile](https://linkedin.com/in/abhedh-krishnan-j-r-b64a81381) |
+| Arathy Krishna AM | Member | [@username](https://github.com/arathy-2007) | [Profile](https://linkedin.com/in/arathykrishnaam) |
+| Eshan MS | Member | [@username](https://github.com/eshanms) | [Profile](https://linkedin.com/in/eshan-ms-462802390) |
+| Gokul Viswa P | Member | [@username](https://github.com/xbox-one-x-guy) | [Profile](https://linkedin.com/in/gokul-viswa-p-863a58381) |
+| S Aswini Devi | Member | [@username](https://github.com/aswiniidevi) | [Profile](https://linkedin.com/in/aswini-devi-3b66b23ab) |
 
 ---
 
