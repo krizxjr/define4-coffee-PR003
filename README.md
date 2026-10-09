@@ -93,13 +93,13 @@ Describe the core idea, workflow, and key technologies used to build the solutio
 
 | Category | Technologies |
 |----------|--------------|
-| **Frontend** | Technologies |
-| **Backend** | Technologies |
-| **Database** | Technologies |
-| **APIs / Services** | Technologies |
-| **AI / ML** | Technologies |
-| **DevOps / Deployment** | Technologies |
-| **Other Tools** | Technologies |
+| **Frontend** | React + Vite |
+| **Backend** | Python Flask |
+| **Database** | PostGresSQL (hosted at SupaBase for Demo) |
+| **APIs / Services** | PostgreSQL Flask Driver (psycopg3) |
+| **AI / ML** | - |
+| **DevOps / Deployment** | git / GitHub |
+| **Other Tools** | Zed, VS Code, NP++ |
 
 ## System Architecture
 
