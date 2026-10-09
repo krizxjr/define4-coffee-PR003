@@ -57,6 +57,7 @@ Generic cloud folders or personal bookmarks don't scale across a college batch, 
 
 To fix the midnight panic of hunting through random WhatsApp groups and scattered Drive links, we built StudyHub. It acts as a single campus dashboard that consolidates PDFs, YouTube videos, GitHub repos, and notes into one searchable, subject-organized workspace so students can stop searching and start studying.
 
+Describe the core idea, workflow, and key technologies used to build the solution.
 
 ---
 
