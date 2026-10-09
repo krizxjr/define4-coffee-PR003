@@ -4,7 +4,7 @@ The official project submission repository for **DEFINE 4.0 — The World's Real
 
 ---
 
-# < Project Name >
+# OpenAttic
 
 <!-- Add your project cover image below -->
 
