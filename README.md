@@ -37,18 +37,20 @@ Students frequently waste valuable time hunting for study materials scattered ac
 
 Notes, PDFs, YouTube videos, GitHub repositories, previous-year questions, and textbooks are often scattered across different platforms, making it difficult for students to find, organise, and use the right study resources.
 
-Explain:
+### What is the problem?
 
-What is the problem?
 Study resources (lecture notes, PDFs, YouTube tutorials, GitHub repos, PYQs, textbooks) are fragmented across random platforms, cloud folders, and chats, making them a nightmare to track down.
 
-Who is affected by it?
+### Who is affected by it?
+
 Students and peer study groups within our institution who need a reliable, shared repository of materials tailored to our curriculum.
 
-Why is solving it important?
+### Why is solving it important?
+
 It eliminates administrative friction, keeps every classmate on the same page, and ensures that institutional knowledge (like previous-year questions and notes) isn't lost in chat histories.
 
-Limitations of existing solutions:
+### Limitations of existing solutions:
+
 Generic cloud folders or personal bookmarks don't scale across a college batch, lack structured topic tagging, and fail to handle multi-format media like embedded GitHub repos or YouTube timestamps in a single academic workspace.
 
 ## Solution
