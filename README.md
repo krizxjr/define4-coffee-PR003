@@ -35,7 +35,7 @@ Write a concise 2–3 sentence summary of your project, what it does, and the pr
 
 ## Problem Statement
 
-Describe the problem your project aims to solve.
+Notes, PDFs, YouTube videos, GitHub repositories, previous-year questions, and textbooks are often scattered across different platforms, making it difficult for students to find, organise, and use the right study resources.
 
 Explain:
 
