@@ -12,7 +12,7 @@ The official project submission repository for **DEFINE 4.0 — The World's Real
 
 ## Team Information
 
-- **Team Name**:coffee.java
+- **Team Name**:Coffee.java
 - **Track**:Design
 
 ## Team Members
@@ -31,7 +31,7 @@ The official project submission repository for **DEFINE 4.0 — The World's Real
 
 ## Overview
 
-Write a concise 2–3 sentence summary of your project, what it does, and the primary problem it addresses.
+Students frequently waste valuable time hunting for study materials scattered across random platforms, folders, and browser tabs. OpenAttic solves this by providing a centralised dashboard that brings notes, textbooks, videos, and code repositories together in one unified place. This allows students to effortlessly organise their resources by subject and instantly discover everything they need for their studies.
 
 ## Problem Statement
 
@@ -39,14 +39,21 @@ Notes, PDFs, YouTube videos, GitHub repositories, previous-year questions, and t
 
 Explain:
 
-- What is the problem?
-- Who is affected by it?
-- Why is solving it important?
-- What are the limitations of existing solutions?
+What is the problem?
+Study resources (lecture notes, PDFs, YouTube tutorials, GitHub repos, PYQs, textbooks) are fragmented across random platforms, cloud folders, and chats, making them a nightmare to track down.
+
+Who is affected by it?
+Students and peer study groups within our institution who need a reliable, shared repository of materials tailored to our curriculum.
+
+Why is solving it important?
+It eliminates administrative friction, keeps every classmate on the same page, and ensures that institutional knowledge (like previous-year questions and notes) isn't lost in chat histories.
+
+Limitations of existing solutions:
+Generic cloud folders or personal bookmarks don't scale across a college batch, lack structured topic tagging, and fail to handle multi-format media like embedded GitHub repos or YouTube timestamps in a single academic workspace.
 
 ## Solution
 
-Explain your proposed solution and how it addresses the identified problem.
+To fix the midnight panic of hunting through random WhatsApp groups and scattered Drive links, we built StudyHub. It acts as a single campus dashboard that consolidates PDFs, YouTube videos, GitHub repos, and notes into one searchable, subject-organized workspace so students can stop searching and start studying.
 
 Describe the core idea, workflow, and key technologies used to build the solution.
 
