@@ -57,7 +57,13 @@ Generic cloud folders or personal bookmarks don't scale across a college batch, 
 
 To fix the midnight panic of hunting through random WhatsApp groups and scattered Drive links, we built StudyHub. It acts as a single campus dashboard that consolidates PDFs, YouTube videos, GitHub repos, and notes into one searchable, subject-organized workspace so students can stop searching and start studying.
 
-Describe the core idea, workflow, and key technologies used to build the solution.
+## How it works
+
+1. **Add a resource.** Save a useful link or upload a supported file to the library.
+2. **Organise it.** Associate resources with subjects and topics so they are easier to revisit.
+3. **Find it later.** Search the library and narrow results with filters and sorting.
+4. **Open the material.** Follow a resource link or access an uploaded file through the application.
+5. **Review the collection.** Use the dashboard to get an overview of the resource library.
 
 ---
 
@@ -107,13 +113,15 @@ Describe the core idea, workflow, and key technologies used to build the solutio
 
 ![System Architecture](./assets/architecture.png)
 
-## Key Features
+## Key features
 
-- Feature 1
-- Feature 2
-- Feature 3
-- Feature 4
-- Feature 5
+- **Centralised resource library** for study materials and useful external links.
+- **Subject and topic organisation** to keep resources grouped by course content.
+- **Search, filtering, sorting, and pagination** to help users find relevant material in a growing library.
+- **File uploads** for supported study documents and images.
+- **Private file storage access** using time-limited signed URLs for uploaded files.
+- **Dashboard overview** of the resource collection.
+- **REST API backend** connecting the frontend to resource, subject, topic, and dashboard data.
 
 ---
 
