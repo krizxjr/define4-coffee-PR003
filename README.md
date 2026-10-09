@@ -19,10 +19,10 @@ The official project submission repository for **DEFINE 4.0 — The World's Real
 
 | Name | Role | GitHub | LinkedIn |
 |------|------|--------|----------|
-| Full Name | Role | [@username](https://github.com/username) | [Profile](https://linkedin.com/in/username) |
-| Full Name | Role | [@username](https://github.com/username) | [Profile](https://linkedin.com/in/username) |
-| Full Name | Role | [@username](https://github.com/username) | [Profile](https://linkedin.com/in/username) |
-| Full Name | Role | [@username](https://github.com/username) | [Profile](https://linkedin.com/in/username) |
+| Arathy Krishna AM | Role | [@username](https://github.com/arathy-2007) | [Profile](https://linkedin.com/in/username) |
+| Eshan MS | Role | [@username](https://github.com/eshanms) | [Profile](https://linkedin.com/in/username) |
+| Gokul Viswa P | Role | [@username](https://github.com/xbox-one-x-guy) | [Profile](https://linkedin.com/in/username) |
+| S Aswini Devi | Role | [@username](https://github.com/aswiniidevi) | [Profile](https://linkedin.com/in/username) |
 
 ---
 
