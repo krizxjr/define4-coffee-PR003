@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#EAE2D6" />
+    <meta name="description" content="Sign in to Open Attic — all your learning, under one roof." />
+    <script src="js/config.js"></script>
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem('open-attic:theme');
+          if (theme !== 'light' && theme !== 'dark') theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          document.documentElement.dataset.theme = theme;
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <title>Sign in — Open Attic</title>
+  </head>
+  <body class="login-page">
+    <main class="auth-shell">
+      <section class="auth-story" aria-label="About Open Attic">
+        <div class="brand auth-brand" aria-label="Open Attic">
+          <svg class="logo-mark" width="38" height="38" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="9" style="fill: var(--lamp)" />
+            <path d="M5.5 17 16 7.5 26.5 17" fill="none" style="stroke: var(--roof-deep)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+            <rect x="11" y="17" width="10" height="8" rx="1.6" style="fill: var(--roof-deep)" />
+          </svg>
+          <span>Open Attic</span>
+        </div>
+
+        <div class="story-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR LEARNING, GATHERED</p>
+          <h1>A little more room<br />for <em>big ideas.</em></h1>
+          <p class="story-description">A home for every note, video, paper and brilliant find. Keep the resources that move you forward, all under one roof.</p>
+
+          <div class="attic-scene" aria-hidden="true">
+            <div class="scene-glow"></div>
+            <div class="scene-roof"></div>
+            <div class="scene-window"><span></span><span></span><span></span><span></span></div>
+            <div class="shelf shelf-one"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="shelf shelf-two"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="scene-caption"><span class="caption-mark">✳</span><span><strong>Your own learning attic</strong><small>Collected today. Ready when you are.</small></span></div>
+          </div>
+        </div>
+        <p class="story-footnote">Made for curious minds, one resource at a time.</p>
+      </section>
+
+      <section class="auth-form-panel" aria-labelledby="authTitle">
+        <div class="auth-topline">
+          <span class="mobile-brand">Open Attic</span>
+          <button class="icon-btn auth-theme-btn" id="themeBtn" type="button" aria-label="Switch colour theme" title="Switch colour theme">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13A8.8 8.8 0 0 1 11 3.1 8.9 8.9 0 1 0 20.9 13Z"/></svg>
+          </button>
+        </div>
+
+        <div class="auth-card">
+          <div class="auth-card-heading">
+            <span class="auth-kicker" id="authKicker">WELCOME BACK</span>
+            <h2 id="authTitle">Good to see you.</h2>
+            <p id="authSubtitle">Sign in to find your place and pick up where you left off.</p>
+          </div>
+
+          <div class="auth-notice" id="setupNotice" role="status" hidden>
+            <strong>Sign-in needs a quick setup</strong>
+            <p>Set <code>VITE_SUPABASE_URL</code> and <code>VITE_SUPABASE_ANON_KEY</code> in your <code>.env</code> file, then restart the frontend to enable real accounts.</p>
+            <span id="demoLink" hidden></span>
+          </div>
+
+          <form id="authForm" novalidate>
+            <div class="auth-field" id="nameField" hidden>
+              <label for="fullName">Your name <span>optional</span></label>
+              <input id="fullName" name="name" type="text" autocomplete="name" placeholder="How should we call you?" />
+            </div>
+            <div class="auth-field" id="emailField">
+              <label for="email">Email address</label>
+              <div class="input-wrap">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+              </div>
+            </div>
+            <div class="auth-field" id="passwordField">
+              <div class="label-row"><label for="password" id="passwordLabel">Password</label><a href="#reset" id="forgotLink">Forgot password?</a></div>
+              <div class="input-wrap">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Enter your password" />
+                <button type="button" class="password-toggle" id="passwordToggle" aria-label="Show password">Show</button>
+              </div>
+              <p class="field-hint" id="passwordHint" hidden>Use at least 8 characters.</p>
+            </div>
+            <div class="auth-field" id="confirmPasswordField" hidden>
+              <label for="confirmPassword">Confirm password</label>
+              <div class="input-wrap">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="m9 15 2 2 4-4"/></svg>
+                <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" placeholder="Enter it once more" />
+              </div>
+            </div>
+
+            <p class="auth-message" id="authMessage" role="status" aria-live="polite" hidden></p>
+            <button type="submit" class="btn btn-solid auth-submit" id="submitBtn">Sign in <span aria-hidden="true">→</span></button>
+          </form>
+
+          <div class="auth-switch" id="authSwitch">New to Open Attic? <button type="button" id="switchMode">Create an account</button></div>
+          <div class="auth-switch auth-reset-switch" id="resetSwitch" hidden><button type="button" id="backToLogin">← Back to sign in</button></div>
+          <div class="auth-divider"><span></span><small>A QUIETER WAY TO STUDY</small><span></span></div>
+          <p class="privacy-note"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg> Your saved learning space, just for you.</p>
+        </div>
+        <footer class="auth-footer auth-footer-centered"><span>© Open Attic · Coffee.java</span></footer>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

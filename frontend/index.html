@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#EAE2D6" />
+    <meta name="description" content="Open Attic — All your learning, under one roof." />
+    <script src="js/config.js"></script>
+    <script>
+      /* Apply saved theme, intro, and optional auth guard before first paint. */
+      (function () {
+        var d = document.documentElement;
+        try { if (window.OPEN_ATTIC_CONFIG && window.OPEN_ATTIC_CONFIG.REQUIRE_AUTH === true) d.dataset.authPending = '1'; } catch (e) {}
+        try {
+          var t = localStorage.getItem('open-attic:theme');
+          if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          d.dataset.theme = t;
+        } catch (e) {}
+        try {
+          if (!sessionStorage.getItem('open-attic:intro-seen') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            d.dataset.intro = '1';
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233B2A20'/%3E%3Cpath d='M5 17 16 7l11 10' fill='none' stroke='%23F0A93B' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='11' y='17' width='10' height='8' rx='1.5' fill='%23F0A93B'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Open Attic — All your learning, under one roof.</title>
+  </head>
+  <body>
+    <!-- Intro splash (shown once per session) -->
+    <div class="brand-intro" id="intro" role="presentation" aria-hidden="true">
+      <div class="brand-intro-lockup">
+        <svg class="logo-mark" width="58" height="58" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="9" style="fill: var(--roof)" />
+          <path d="M5.5 17 16 7.5 26.5 17" fill="none" style="stroke: var(--lamp)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+          <rect x="11" y="17" width="10" height="8" rx="1.6" style="fill: var(--lamp)" />
+        </svg>
+        <span>Open Attic</span>
+        <small>All your learning, under one roof.</small>
+      </div>
+    </div>
+
+    <a class="skip-link" href="#library">Skip to resources</a>
+
+    <header class="topbar" id="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="./" aria-label="Open Attic home">
+          <svg class="logo-mark" width="34" height="34" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="9" style="fill: var(--roof)" />
+            <path d="M5.5 17 16 7.5 26.5 17" fill="none" style="stroke: var(--lamp)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+            <rect x="11" y="17" width="10" height="8" rx="1.6" style="fill: var(--lamp)" />
+          </svg>
+          <span>Open Attic</span>
+        </a>
+        <div class="topbar-actions">
+          <button type="button" class="icon-btn theme-btn" id="themeBtn"></button>
+          <a class="btn btn-outline" href="collections.html">Collections</a>
+          <a class="btn btn-outline communities-nav" href="communities.html">Communities</a>
+          <button type="button" class="btn btn-solid" id="addBtn">
+            <i data-icon="plus" data-size="18"></i>
+            <span>Add resource</span>
+          </button>
+          <button type="button" class="btn btn-outline account-btn" id="accountBtn">Sign in</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero: the roof -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="roof">
+          <div class="roof-bg" aria-hidden="true"></div>
+          <svg class="skylight" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="29" style="fill: var(--lamp)" />
+            <circle cx="32" cy="32" r="29" fill="none" style="stroke: var(--roof-deep)" stroke-width="4" />
+            <path d="M32 3v58M3 32h58" style="stroke: var(--roof-deep)" stroke-width="3" />
+          </svg>
+          <div class="wrap roof-in">
+            <h1 id="hero-title">
+              <span class="line" style="--d: 0.05s">All your learning,</span>
+              <span class="line" style="--d: 0.18s">under one roof.</span>
+            </h1>
+            <p class="hero-sub">
+              Papers, videos, repos and past exam questions from every course you take, saved and searchable in one place.
+            </p>
+
+            <form class="search" role="search" id="searchForm" autocomplete="off">
+              <label for="q" class="sr-only">Search your resources</label>
+              <i data-icon="search" data-size="20" data-class="search-icon"></i>
+              <input id="q" type="search" placeholder="Search by title, subject, topic or tag" autocomplete="off"
+                role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggest" aria-haspopup="listbox" />
+              <button type="button" class="search-clear" id="searchClear" aria-label="Clear search" hidden>
+                <i data-icon="x" data-size="18"></i>
+              </button>
+              <kbd id="searchKbd" aria-hidden="true">/</kbd>
+              <div class="suggest" id="suggest" role="listbox" aria-label="Matching resources" hidden></div>
+            </form>
+
+            <div class="hero-actions">
+              <button type="button" class="explore" id="exploreBtn">
+                <span>Explore</span>
+                <i data-icon="arrow-down" data-size="18"></i>
+              </button>
+              <p class="hero-stats" id="heroStats" aria-live="polite"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="wrap">
+        <!-- Continue -->
+        <section class="continue" id="continue" aria-labelledby="continue-h" data-reveal="pending" hidden>
+          <div class="continue-head">
+            <h2 id="continue-h">Pick up where you left off</h2>
+            <p id="continueSub">Jump straight back into what you opened last.</p>
+          </div>
+          <ul id="continueList"></ul>
+        </section>
+
+        <section class="browse" id="library" aria-labelledby="browse-h">
+          <h2 id="browse-h" class="browse-h">Explore</h2>
+          <div class="types" id="typeTiles" role="group" aria-label="Resource type"></div>
+        </section>
+
+        <div class="layout">
+          <!-- Rail -->
+          <aside class="rail" id="rail" aria-label="Filter by subject"></aside>
+
+          <!-- Results -->
+          <section class="results" aria-labelledby="results-h">
+            <div class="toolbar">
+              <div class="toolbar-left">
+              <button type="button" class="rail-toggle" id="railToggle" aria-expanded="true" aria-controls="rail">
+                <i data-icon="panel-left" data-size="17"></i><span class="rail-toggle-label">Subjects</span><span class="rail-toggle-note" id="railNote" hidden></span>
+              </button>
+              <div class="seg" role="group" aria-label="Show" id="tabSeg">
+                <button type="button" data-tab="all" aria-pressed="true">All<span id="cnt-all">0</span></button>
+                <button type="button" data-tab="saved" aria-pressed="false">Saved<span id="cnt-saved">0</span></button>
+              </div>
+              </div>
+
+              <div class="toolbar-right">
+                <div class="sort">
+                  <label for="sort">Sort by</label>
+                  <select id="sort">
+                    <option value="newest">Recently added</option>
+                    <option value="opened">Recently opened</option>
+                    <option value="title">Title, A to Z</option>
+                  </select>
+                </div>
+                <div class="seg seg-icons" role="group" aria-label="Layout" id="viewSeg">
+                  <button type="button" data-view="grid" aria-pressed="true" aria-label="Grid layout"><i data-icon="layout-grid" data-size="17"></i></button>
+                  <button type="button" data-view="list" aria-pressed="false" aria-label="List layout"><i data-icon="list" data-size="17"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="results-meta">
+              <h2 id="results-h" aria-live="polite">Loading your library</h2>
+              <button type="button" class="link-btn" id="clearFilters" hidden>
+                <i data-icon="rotate-ccw" data-size="14"></i>
+                Clear filters
+              </button>
+            </div>
+
+            <div class="notice" id="notice" role="alert" hidden>
+              <i data-icon="alert-circle" data-size="20"></i>
+              <div>
+                <strong>We could not load your resources.</strong>
+                <p>Check that the Flask backend is running and VITE_API_BASE_URL is set correctly in .env.</p>
+              </div>
+              <button type="button" class="btn btn-outline btn-sm" id="retryBtn">Try again</button>
+            </div>
+
+            <ul class="grid" id="skeleton" data-view="grid" aria-hidden="true">
+              <li class="skeleton"></li><li class="skeleton"></li><li class="skeleton"></li>
+              <li class="skeleton"></li><li class="skeleton"></li><li class="skeleton"></li>
+            </ul>
+
+            <ul class="grid" id="grid" data-view="grid" hidden></ul>
+
+            <div class="empty" id="empty" hidden></div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-in">
+        <p><strong>Open Attic</strong></p>
+      </div>
+    </footer>
+
+    <button type="button" class="to-top" id="toTop" aria-label="Back to top" hidden>
+      <i data-icon="arrow-up" data-size="20"></i>
+    </button>
+
+    <!-- Add resource modal -->
+    <div class="scrim" id="modal" hidden>
+      <div class="modal" id="dialog" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+        <header class="modal-head">
+          <div>
+            <h2 id="modal-heading">Add a resource</h2>
+            
+          </div>
+          <button type="button" class="icon-btn" id="modalClose" aria-label="Close"><i data-icon="x" data-size="20"></i></button>
+        </header>
+
+        <form id="addForm" novalidate class="modal-body">
+          <fieldset class="field type-step">
+            <legend>1. What type of resource is this?</legend>
+            <p class="field-hint">Choose a type first. We'll tailor the next step to it.</p>
+            <div class="type-picker" id="typePicker"></div>
+          </fieldset>
+
+          <div id="resourceDetails" hidden>
+            <div class="field">
+              <label for="f-title">Title</label>
+              <input id="f-title" placeholder="e.g. Operating Systems: Three Easy Pieces" autocomplete="off" />
+              <p id="f-title-err" class="field-error" hidden></p>
+            </div>
+
+            <fieldset class="field source-fieldset">
+              <legend>2. How would you like to add it?</legend>
+              <div class="source-method" id="sourceMethod" role="group" aria-label="Choose link or file upload">
+                <button type="button" class="source-method-btn" id="methodLinkBtn" aria-pressed="false">
+                  <i data-icon="globe" data-size="19"></i><span>Provide a link</span>
+                </button>
+                <span class="source-or" aria-hidden="true">OR</span>
+                <button type="button" class="source-method-btn" id="methodFileBtn" aria-pressed="false">
+                  <i data-icon="file-text" data-size="19"></i><span>Upload a file</span>
+                </button>
+              </div>
+              <p class="field-hint" id="sourceMethodHint">Choose whether to paste a URL or upload a file.</p>
+            </fieldset>
+
+            <div class="field" id="linkSourceField" hidden>
+              <label for="f-url">Resource link</label>
+              <input id="f-url" type="url" inputmode="url" placeholder="https://" autocomplete="off" />
+              <p id="f-url-err" class="field-error" hidden></p>
+            </div>
+
+            <div class="field" id="fileSourceField" hidden>
+              <label for="f-file">Upload file</label>
+              <label class="drop-zone" id="fileDropZone" for="f-file">
+                <input id="f-file" type="file" accept=".png,.jpg,.jpeg,.webp,.gif,.svg,.bmp,.tif,.tiff,.avif,.pdf,.doc,.docx,.ppt,.pptx" aria-label="Choose a file to upload" />
+                <span class="drop-zone-icon" aria-hidden="true"><i data-icon="arrow-up" data-size="24"></i></span>
+                <strong class="drop-zone-title">Drag and drop your file here</strong>
+                <span class="drop-zone-copy">or <u>browse files</u></span>
+                <span class="drop-zone-hint" id="fileDropHint">Images, PDFs, Word documents, or PowerPoint files.</span>
+                <span class="drop-zone-selection" id="fileSelection" role="status" aria-live="polite">No file selected</span>
+              </label>
+              <p id="f-file-err" class="field-error" hidden></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="f-subject">Subject <span class="optional">optional</span></label>
+                <input id="f-subject" list="subjectList" placeholder="e.g. Physics" autocomplete="off" />
+                <datalist id="subjectList"></datalist>
+              </div>
+              <div class="field">
+                <label for="f-topic">Topic <span class="optional">optional</span></label>
+                <input id="f-topic" placeholder="e.g. Optics" autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-desc">Why is it useful? <span class="optional">optional</span></label>
+              <textarea id="f-desc" rows="3" placeholder="A line or two for your future self."></textarea>
+            </div>
+
+            <div class="field">
+              <label for="f-tags">Tags <span class="optional">optional</span></label>
+              <input id="f-tags" placeholder="Separate with commas: lenses, waves, revision" autocomplete="off" />
+            </div>
+
+            <p class="form-error" id="formError" role="alert" hidden></p>
+
+            <footer class="modal-foot">
+              <button type="button" class="btn btn-ghost" id="cancelBtn">Cancel</button>
+              <button type="submit" class="btn btn-solid" id="submitBtn">Add resource</button>
+            </footer>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/icons.js"></script>
+    <script src="js/seed.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
