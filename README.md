@@ -19,11 +19,11 @@ The official project submission repository for **DEFINE 4.0 — The World's Real
 
 | Name | Role | GitHub | LinkedIn |
 |------|------|--------|----------|
-| Abhedh Krishnan JR | Leader | [@username](https://github.com/krizxjr) | [Profile](https://linkedin.com/in/abhedh-krishnan-j-r-b64a81381) |
-| Arathy Krishna AM | Member | [@username](https://github.com/arathy-2007) | [Profile](https://linkedin.com/in/arathykrishnaam) |
-| Eshan MS | Member | [@username](https://github.com/eshanms) | [Profile](https://linkedin.com/in/eshan-ms-462802390) |
-| Gokul Viswa P | Member | [@username](https://github.com/xbox-one-x-guy) | [Profile](https://linkedin.com/in/gokul-viswa-p-863a58381) |
-| S Aswini Devi | Member | [@username](https://github.com/aswiniidevi) | [Profile](https://linkedin.com/in/aswini-devi-3b66b23ab) |
+| Abhedh Krishnan JR | Leader - Backend, Integration| [@username](https://github.com/krizxjr) | [Profile](https://linkedin.com/in/abhedh-krishnan-j-r-b64a81381) |
+| Arathy Krishna AM | Member - Frontend, prototype| [@username](https://github.com/arathy-2007) | [Profile](https://linkedin.com/in/arathykrishnaam) |
+| Eshan MS | Member - Frontend, prototype| [@username](https://github.com/eshanms) | [Profile](https://linkedin.com/in/eshan-ms-462802390) |
+| Gokul Viswa P | Member - Backend, Integration| [@username](https://github.com/xbox-one-x-guy) | [Profile](https://linkedin.com/in/gokul-viswa-p-863a58381) |
+| S Aswini Devi | Member - Frontend, prototype| [@username](https://github.com/aswiniidevi) | [Profile](https://linkedin.com/in/aswini-devi-3b66b23ab) |
 
 ---
 
@@ -71,7 +71,7 @@ To fix the midnight panic of hunting through random WhatsApp groups and scattere
 
 ### Demo Video
 
-[Watch Project Demo](https://www.youtube.com/watch?v=VIDEO_ID)
+[Watch Project Demo](https://drive.google.com/file/d/1gV1WVpcZe7Z3iti2eOn-tAKrSarNhnLD/view?usp=sharing)
 
 > Replace `VIDEO_ID` with your YouTube video ID.
 
@@ -99,13 +99,13 @@ To fix the midnight panic of hunting through random WhatsApp groups and scattere
 
 | Category | Technologies |
 |----------|--------------|
-| **Frontend** | React + Vite |
+| **Frontend** | HTML + CSS + Vite |
 | **Backend** | Python Flask |
 | **Database** | PostGresSQL (hosted at SupaBase for Demo) |
 | **APIs / Services** | PostgreSQL Flask Driver (psycopg3) |
 | **AI / ML** | - |
 | **DevOps / Deployment** | git / GitHub |
-| **Other Tools** | Zed, VS Code, NP++ |
+| **Other Tools** | Figma, Figma Make, Canva, Zed, VS Code, NP++ |
 
 ## System Architecture
 
